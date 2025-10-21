@@ -1,9 +1,0 @@
-services:
-  - type: web
-    name: telegram-botu
-    env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn bot:app
-    envVars:
-      - key: BOT_TOKEN
-        sync: false
