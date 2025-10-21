@@ -1,0 +1,12 @@
+services:
+- type: web
+name: telegram-bot
+env: python
+plan: free
+buildCommand: "pip install -r requirements.txt"
+startCommand: "gunicorn bot:app --bind 0.0.0.0:$PORT"
+envVars:
+- key:8199299680:AAGUONCVNwZVhLtZb1Eq-8OIay7SsBN_U5w
+fromSecret: TELEGRAM_TOKEN
+- key:1211267625
+fromSecret: CHAT_ID
